@@ -1,5 +1,5 @@
 {
-    "name": "mugomes/mgcep",
+    "name": "profmugomes/mgcep",
     "version": "v1.0.0",
     "description": "É uma biblioteca leve e simples em PHP para consulta de CEP utilizando a API pública do ViaCEP.",
     "type": "library",
