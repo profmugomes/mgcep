@@ -1,9 +1,6 @@
 # MGCEP
 
-<!-- Badge opcional para deixar claro visualmente -->
-![Status](https://img.shields.io/badge/status-arquivado--archived-red.svg)
-
-> **Aviso importante:** Está biblioteca foi **oficialmente arquivada** e não receberá mais atualizações, correções de bugs ou suporte para novas versões.
+[![License](https://img.shields.io/badge/license-PolyForm%20Perimeter%201.0.1-5351FB)](LICENSE.md)
 
 É uma biblioteca **leve e simples em PHP** para consulta de CEP utilizando a API pública do **ViaCEP**, com suporte a **cache local em arquivos** para melhorar desempenho e reduzir requisições externas.
 
@@ -29,7 +26,7 @@ Ideal para aplicações que precisam de **consultas rápidas de endereço**, com
 Copie a classe `MGCEP.php` para seu projeto e utilize via `require` ou autoload:
 
 ```php
-composer require mugomes/mgcep;
+composer require profmugomes/mgcep;
 ```
 
 ---
@@ -175,27 +172,42 @@ echo 'UF: ' . $cep->getUF() . PHP_EOL;
 
 ---
 
-## 💙 Apoie
-
-- GitHub: https://github.com/sponsors/mugomes
-- More: https://mugomes.github.io/apoie.html
-
 ## 👤 Autor
 
-**Murilo Gomes Julio**
+**Murilo Gomes**
 
-🔗 [https://www.mugomes.com.br](https://www.mugomes.com.br)
+🔗 [https://www.profmugomes.com.br](https://www.profmugomes.com.br)
 
-📺 [https://youtube.com/@mugomesoficial](https://youtube.com/@mugomesoficial)
+📺 [https://youtube.com/@profmugomes](https://youtube.com/@profmugomes)
 
 ---
 
+## 🤝 Support
+
+* GitHub Sponsors: [https://github.com/sponsors/profmugomes](https://github.com/sponsors/profmugomes)
+
 ## License
 
-The MGCEP is provided under:
+Copyright (c) 2026 Murilo Gomes <profmugomes.com.br>. All Rights Reserved.
 
-[SPDX-License-Identifier: LGPL-2.1-only](https://github.com/mugomes/mgcep/blob/main/LICENSE)
+This project is licensed under the PolyForm Perimeter License 1.0.1.
 
-Beign under the terms of the GNU Lesser General Public License version 2.1 only.
+### Summary
 
-All contributions to the MGCEP are subject to this license.
+This software is available for commercial and noncommercial use, subject to the terms of the PolyForm Perimeter License 1.0.1.
+
+You may:
+
+* ✔ Use the software for commercial and noncommercial purposes.
+* ✔ Inspect and study the source code.
+* ✔ Modify the software.
+* ✔ Create derivative works based on the software.
+* ✔ Redistribute the software and permitted modifications.
+
+You may not:
+
+* ✖ Provide a product that competes with the software.
+
+See the full license terms at LICENSE.md.
+
+This summary is provided for convenience only and does not replace or modify the full license terms.

@@ -2,17 +2,19 @@
     "name": "mugomes/mgcep",
     "version": "v1.0.0",
     "description": "É uma biblioteca leve e simples em PHP para consulta de CEP utilizando a API pública do ViaCEP.",
+    "type": "library",
     "authors": [
         {
-            "name": "Murilo Gomes Julio",
-            "email": "mugomesoficial@gmail.com",
-            "homepage": "https://mugomes.github.io"
+            "name": "Murilo Gomes",
+            "email": "profmugomes@gmail.com",
+            "homepage": "https://www.profmugomes.com.br"
         }
     ],
+    "license": "proprietary",
     "_comment": [
-        "Copyright (C) 2026 Murilo Gomes Julio"
+        "PolyForm Perimeter License 1.0.1",
+        "Copyright (C) 2026 Murilo Gomes <profmugomes.com.br>. All Rights Reserved."
     ],
-    "license": "LGPL-2.1-only",
     "autoload": {
         "psr-4": {
             "MGCEP\\": "src/"
