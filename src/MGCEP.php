@@ -1,8 +1,10 @@
 <?php
-// Copyright (C) 2026 Murilo Gomes Julio
-// SPDX-License-Identifier: LGPL-2.1-only
+// Copyright (c) 2026 Murilo Gomes <profmugomes.com.br>. All Rights Reserved. (https://profmugomes.com.br)
 
-// Site: https://mugomes.github.io
+// Licensed under the PolyForm Perimeter License 1.0.1.
+// See LICENSE.md for details.
+
+declare(strict_types=1);
 
 namespace MGCEP;
 
@@ -12,7 +14,7 @@ class MGCEP
     private int $cacheTTL = 2592000; // 30 dias
     private array $dados = [];
 
-    public function setCacheDir(string $path, int $permission = 0777)
+    public function setCacheDir(string $path, int $permission = 0777):void
     {
         if (!file_exists($path)) {
             mkdir($path, $permission, true);
@@ -21,12 +23,12 @@ class MGCEP
         $this->cacheDir = $path;
     }
 
-    public function setCacheTTL(int $value)
+    public function setCacheTTL(int $value):void
     {
         $this->cacheTTL = $value;
     }
 
-    private function setCache(string $key, array $data)
+    private function setCache(string $key, array $data):void
     {
         if (empty($this->cacheDir)) {
             $this->setCacheDir(dirname(__FILE__, 2) . '/cache', 0755);
@@ -36,7 +38,7 @@ class MGCEP
         file_put_contents($filename, json_encode($data), LOCK_EX);
     }
 
-    private function getCache(string $key, string $ttl): ?array
+    private function getCache(string $key, int $ttl): ?array
     {
         $filename = $this->cacheDir . '/' . md5($key) . '.json';
 
@@ -94,7 +96,6 @@ class MGCEP
         if (!empty($data['erro'])) {
             return 'CEP não encontrado!';
         }
-
 
         $this->dados = $data;
         return false;
