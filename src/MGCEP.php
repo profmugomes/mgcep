@@ -1,8 +1,8 @@
 <?php
-// Copyright (c) 2026 Murilo Gomes <profmugomes.com.br>. All Rights Reserved. (https://profmugomes.com.br)
+// Copyright (C) 2026 Murilo Gomes <profmugomes.com.br
+// SPDX-License-Identifier: GPL-2.0-only
 
-// Licensed under the PolyForm Perimeter License 1.0.1.
-// See LICENSE.md for details.
+// Site: https://www.profmugomes.com.br
 
 declare(strict_types=1);
 

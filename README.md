@@ -1,7 +1,5 @@
 # MGCEP
 
-[![License](https://img.shields.io/badge/license-PolyForm%20Perimeter%201.0.1-5351FB)](LICENSE.md)
-
 É uma biblioteca **leve e simples em PHP** para consulta de CEP utilizando a API pública do **ViaCEP**, com suporte a **cache local em arquivos** para melhorar desempenho e reduzir requisições externas.
 
 Ideal para aplicações que precisam de **consultas rápidas de endereço**, com **baixo consumo de recursos** e **fácil integração**.
@@ -52,7 +50,7 @@ $erro = $cep->getCEP('01001000');
 if ($erro) {
     echo $erro;
 } else {
-    echo $cep->getLogradouro();
+    echo $cep->getEndereco();
 }
 ```
 
@@ -109,7 +107,7 @@ Após uma consulta bem-sucedida (`getCEP`), os dados podem ser acessados:
 ### 🏠 Endereço
 
 ```php
-$cep->getLogradouro();
+$cep->getEndereco();
 $cep->getComplemento();
 $cep->getUnidade();
 $cep->getBairro();
@@ -120,7 +118,7 @@ $cep->getBairro();
 ### 🌆 Localização
 
 ```php
-$cep->getLocalidade();
+$cep->getCidade();
 $cep->getUF();
 $cep->getEstado();
 $cep->getRegiao();
@@ -148,16 +146,16 @@ $cep = new MGCEP();
 $cep->setCacheDir(__DIR__ . '/cache');
 $cep->setCacheTTL(86400); // 1 dia
 
-$erro = $cep->getCEP('01001000');
+$erro = $cep->consultar('01001000');
 
 if ($erro) {
     echo "Erro: $erro";
     exit;
 }
 
-echo 'Rua: ' . $cep->getLogradouro() . PHP_EOL;
+echo 'Rua: ' . $cep->getEndereco() . PHP_EOL;
 echo 'Bairro: ' . $cep->getBairro() . PHP_EOL;
-echo 'Cidade: ' . $cep->getLocalidade() . PHP_EOL;
+echo 'Cidade: ' . $cep->getCidade() . PHP_EOL;
 echo 'UF: ' . $cep->getUF() . PHP_EOL;
 ```
 
@@ -186,28 +184,14 @@ echo 'UF: ' . $cep->getUF() . PHP_EOL;
 
 * GitHub Sponsors: [https://github.com/sponsors/profmugomes](https://github.com/sponsors/profmugomes)
 
+* https://buymeacoffee.com/profmugomes
+
 ## License
 
-Copyright (c) 2026 Murilo Gomes <profmugomes.com.br>. All Rights Reserved.
+The MGCEP is provided under:
 
-This project is licensed under the PolyForm Perimeter License 1.0.1.
+[SPDX-License-Identifier: LGPL-2.1-only](https://spdx.org/licenses/LGPL-2.1-only.html)
 
-### Summary
+Beign under the terms of the GNU Lesser General Public License version 2.1 only.
 
-This software is available for commercial and noncommercial use, subject to the terms of the PolyForm Perimeter License 1.0.1.
-
-You may:
-
-* ✔ Use the software for commercial and noncommercial purposes.
-* ✔ Inspect and study the source code.
-* ✔ Modify the software.
-* ✔ Create derivative works based on the software.
-* ✔ Redistribute the software and permitted modifications.
-
-You may not:
-
-* ✖ Provide a product that competes with the software.
-
-See the full license terms at LICENSE.md.
-
-This summary is provided for convenience only and does not replace or modify the full license terms.
+All contributions to the MGCEP are subject to this license.
